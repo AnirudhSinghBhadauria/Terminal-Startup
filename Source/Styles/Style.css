@@ -1,0 +1,155 @@
+@import "https://unpkg.com/open-props";
+:root {
+  --arrow: url("https://img.icons8.com/material/14/ffffff/cursor--v1.png"),
+  default;
+  --hand: url("https://img.icons8.com/sf-black-filled/18/ffffff/hand-cursor.png"),
+  default;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  margin-left: var(--size-2);
+  min-height: 100vh;
+  overflow-y: hidden;
+  cursor: var(--arrow);
+}
+
+img {
+  margin: 0 auto;
+}
+
+.terminalText,
+#links,
+#Date_Time,
+.prefix {
+  color: rgba(255, 255, 255, 0.607);
+  font-size: var(--font-size-1);
+  font-family: monospace, sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+section #searchBox {
+  display: none;
+  min-width: 60rem;
+}
+section #searchEngine {
+  max-width: var(--size-5);
+}
+section #searchEngine,
+section #searchBox {
+  background: black;
+  color: rgba(255, 255, 255, 0.607);
+  font-size: var(--font-size-1);
+  font-family: monospace, sans-serif;
+  border: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+#github {
+  color: yellow;
+}
+
+#hunt {
+  color: #A460ED;
+}
+
+#icons {
+  color: #FF5B00;
+}
+
+#keep {
+  color: #C3FF99;
+}
+
+#pen {
+  color: #B9FFF8;
+}
+
+#githubHome {
+  color: #FA2FB5;
+}
+
+.link {
+  cursor: var(--hand);
+}/*# sourceMappingURL=Style.css.map */
