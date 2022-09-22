@@ -47,6 +47,9 @@ DOCS :
   "Terminator But Better" is Meant To be used on Desktop/PC/Mac only and not on ANY KIND OF MOBILE DEVICE.
   
   
+  Thank You for Reading Docs!
+  
+  
   
   
   
