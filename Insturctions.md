@@ -39,7 +39,7 @@ DOCS :
   4. To Reset The whole Thing Press "Escape" key.
   5. Screen Saver (Audio Bars) is set for 6 Seconds of Inactivity.
   6. Screen Saver will disappear due to any activity. (Mouse Movment,KeyDown)
-  7. You can manually Apply Screen Saver by Hard Scrolling downwards or by using "Page Down" key!
+  7. You can manually Apply Screen Saver by using "Page Down" key!
   
   ![image](https://user-images.githubusercontent.com/108342411/191801128-b709e27f-408c-4c40-96e6-42c47b3d5019.png)
 
