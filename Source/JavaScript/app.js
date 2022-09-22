@@ -1,5 +1,5 @@
 let Date_Time, terminalText, additionalText;
-let time,  timer = 4;
+let time,  timer = 7;
 let timed_out = false;
 const engine = document.querySelector(`#search`);
 const searchEngine = document.querySelector(`#searchEngine`);
@@ -127,9 +127,9 @@ window.addEventListener(`keydown`, (action) => {
 
   function resetTimer() {
     clearTimeout(time);
-    timer = 4;  
+    timer = 7;  
     timed_out = false;
-    time = setTimeout(logout, 4000);
+    time = setTimeout(logout, 7000);
   }
 
   function ballbounce() {
