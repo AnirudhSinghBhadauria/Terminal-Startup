@@ -1,9 +1,9 @@
 @import "https://unpkg.com/open-props";
-:root{
+:root {
   --arrow: url("https://img.icons8.com/material/14/ffffff/cursor--v1.png"),
-  default;
+    default;
   --hand: url("https://img.icons8.com/sf-black-filled/18/ffffff/hand-cursor.png"),
-  default;
+    default;
 }
 *,
 *::before,
@@ -11,6 +11,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 a {
   text-decoration: none;
@@ -25,6 +28,7 @@ html {
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
+  background-color: #010101;
 }
 html:focus-within {
   scroll-behavior: smooth;
@@ -54,6 +58,10 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+::selection {
+  background: rgb(120, 120, 120);
+  color: black;
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -64,7 +72,6 @@ input[type="number"] {
     scroll-behavior: auto !important;
   }
 }
-
 @mixin flex($direction, $justify, $align) {
   display: flex;
   flex-direction: $direction;
@@ -75,7 +82,7 @@ input[type="number"] {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #000;
+  background-color: #010101;
   margin-left: var(--size-2);
   min-height: 100vh;
   overflow-y: hidden;
@@ -85,46 +92,106 @@ img {
   margin: 0 auto;
 }
 
-.terminalText,
-#links,
-#Date_Time,
-.prefix {
-  color: rgba(255, 255, 255, 0.607);
-  font-size: var(--font-size-1);
-  font-family: monospace, sans-serif;
-}
-
-section {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-
-  #searchBox {
-    display: none;
-    min-width: 60rem;
-  }
-
-  #searchEngine {
-    max-width: var(--size-5);
-  }
-  #searchEngine,
-  #searchBox {
-    background: black;
+#hero {
+  min-height: 100vh;
+  min-width: 100%;
+  .terminalText,
+  #links,
+  #Date_Time,
+  .prefix {
     color: rgba(255, 255, 255, 0.607);
     font-size: var(--font-size-1);
     font-family: monospace, sans-serif;
-    border: none;
-    width: min-content;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    #searchBox {
+      display: none;
+      min-width: 60rem;
+    }
+
+    #searchEngine {
+      max-width: var(--size-5);
+    }
+    #searchEngine,
+    #searchBox {
+      background: black;
+      color: rgba(255, 255, 255, 0.607);
+      font-size: var(--font-size-1);
+      font-family: monospace, sans-serif;
+      border: none;
+      width: min-content;
+    }
   }
 }
 
+.audio-bars {
+  @include flex(row,center,center);
+  height: 100vh;
+  width: 100%;
+}
+.bar {
+  background: #fff;
+  height: var(--size-fluid-7);
+  width: 6px;
+  margin-right: 6px;
+  border-radius: var(--radius-6);
+}
+.bar:last-child {
+  margin-right: 0;
+}
 
-#github {color: yellow;}
-#hunt {color: #A460ED;}
-#icons {color: #FF5B00;}
-#keep {color:#C3FF99;}
-#pen {color: #B9FFF8;}
-#githubHome {color: #FA2FB5;}
-.link{
+@keyframes sound {
+  0% {
+    transform: scale3d(1, 0.1, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes sound2 {
+  0% {
+    transform: scale3d(1, 0.1, 1);
+  }
+  100% {
+    transform: scale3d(1, 0.5, 1);
+  }
+}
+
+.bar:nth-child(1),
+.bar:nth-child(7),
+.bar:nth-child(12) {
+  animation: sound2 0ms -800ms linear infinite alternate;
+  animation-duration: 240ms;
+}
+.bar:nth-child(2),
+.bar:nth-child(6),
+.bar:nth-child(11) {
+  animation: sound 0ms -800ms linear infinite alternate;
+  animation-duration: 340ms;
+}
+.bar:nth-child(3),
+.bar:nth-child(8),
+.bar:nth-child(13) {
+  animation: sound 0ms -800ms linear infinite alternate;
+  animation-duration: 240ms;
+}
+.bar:nth-child(4),
+.bar:nth-child(10),
+.bar:nth-child(14) {
+  animation: sound 0ms -800ms linear infinite alternate;
+  animation-duration: 290ms;
+}
+.bar:nth-child(5),
+.bar:nth-child(9),
+.bar:nth-child(15) {
+  animation: sound2 0ms -800ms linear infinite alternate;
+  animation-duration: 190ms;
+}
+.link {
   cursor: var(--hand);
 }

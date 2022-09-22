@@ -5,21 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminator but Better | Homepage</title>
+    <title>Terminator but Better</title>
     <link rel="stylesheet" href="Source/Styles/Style.css">
-    <link rel="shortcut icon" href="./Source/Styles/Images and Svg/icons8-terminal-96.png">
+    <link rel="shortcut icon" href="./Source/Styles/imageAndSvg/icons8-terminal-96.png">
 </head>
 
 <body>
-    <div id="hero">
+   
+    
+ 
 
-        <img src="./Source/Styles/Images and Svg/Window 101 Final.png" alt="Window 1.01">
+    <div id="hero" class="hero"> 
+        <img src="./Source/Styles/imageAndSvg/Window 101 Final.png" alt="Window 1.01">
         <div>
+
             <p id="Date_Time"></p>
             <p id="links">
-                > <a class="link" id = "github" href="">read docs on github (insturctions)</a> <br>
+                > <a class="link" id="github" style="color: yellow;" href="">read docs on github (insturctions)</a> <br>
                 > Screen Version <span id="screenVersion"></span>.00.03 <br>
-                > <a class="link" id = "hunt" href="https://colorhunt.co/">colorHunt</a>.<a class="link" id = "icons" href="https://icons8.com/">icons8</a>.<a class="link" id = "keep" href="https://keep.google.com/u/0/">keep</a>.<a class="link" id = "githubHome" href="https://github.com/">github</a>.<a class="link" id = "pen" href="https://codepen.io/trending">codePen</a> <br><br></br>
+                > <a class="link" id="hunt" style="color:#a460ed ;" href="https://colorhunt.co/">colorHunt</a>.<a class="link" id="icons" style="color: #ff5b00;"
+                    href="https://icons8.com/">icons8</a>.<a class="link" id="keep" style="color:#c3ff99 ;"
+                    href="https://keep.google.com/u/0/">keep</a>.<a class="link" id="githubHome" style="color:#fa2fb5 ;"
+                    href="https://github.com/">github</a>.<a class="link" id="coolers" style="color:#2fa4ff;"
+                    href="https://coolors.co/">coolers</a>.<a class="link" id="pen" style="color:#b9fff8 ;"
+                    href="https://codepen.io/trending">codePen</a> <br><br></br>
             </p>
             <p><span class="terminalText"></span></p>
         </div>
@@ -37,10 +46,36 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./Source/JavaScript/typed.min.js"></script>
-    <script src="./Source/JavaScript/app.js" type="module"></script>
+    <div class="audio-bars">
+        <div class="bar" style="background-color:#f94144;"></div>
+        <div class="bar" style="background-color: #f3722c;"></div>
+        <div class="bar" style="background-color: #f8961e;"></div>
+        <div class="bar" style="background-color: #f9844a;"></div>
+        <div class="bar" style="background-color: #f9c74f;"></div>
+        <div class="bar" style="background-color: #7251b5;"></div>
+        <div class="bar" style="background-color: #43aa8b;"></div>
+        <div class="bar" style="background-color:#d2b7e5;"></div>
+        <div class="bar" style="background-color: #4d908e;"></div>
+        <div class="bar" style="background-color: #577590;"></div>
+        <div class="bar" style="background-color: #277da1;"></div>
+        <div class="bar" style="background-color: #70d6ff;"></div>
+        <div class="bar" style="background-color: #ff4d6d;"></div>
+        <div class="bar" style="background-color: #90be6d;"></div>
+        <div class="bar" style="background-color:#7678ed ;"></div>
+    </div>
 
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./Source/JavaScript/typed.min.js"></script>
+    <script>
+        window.addEventListener(`load`, () => {
+            const script = document.createElement(`script`);
+            script.setAttribute(`type`, `module`);
+            script.src = `./Source/JavaScript/app.js`;
+            document.body.appendChild(script);
+        })
+    </script>
 </body>
 
 </html>
